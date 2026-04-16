@@ -1,8 +1,31 @@
 [gd_scene format=3 uid="uid://d0ikgvpi2pru3"]
 
+[ext_resource type="Texture2D" uid="uid://bay0mv77l3vtq" path="res://images/link.webp" id="1_p0vlq"]
+[ext_resource type="Script" uid="uid://dbq4d7rdsiynm" path="res://scenes/player.gd" id="1_v6fml"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v6fml"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p0vlq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3li8b"]
+size = Vector2(138, 271)
+
 [node name="Area2D" type="Area2D" unique_id=1220127185]
+position = Vector2(136, 136)
+script = ExtResource("1_v6fml")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1214223773]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_v6fml")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=129894208]
+position = Vector2(2, 0.5)
+shape = SubResource("RectangleShape2D_3li8b")
