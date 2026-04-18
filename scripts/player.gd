@@ -12,10 +12,10 @@ func ready():
 
 
 func _physics_process(delta: float) -> void:
-	velocity = Vector2.ZERO
+	velocity.x = 0
 	
 	if not is_on_floor():
-			velocity.y += gravity
+		velocity.y += gravity * delta
 			
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
@@ -24,8 +24,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y += jump_velocity
 		
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
+	if abs(velocity.x) > 0:
+		velocity.x *= speed
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
