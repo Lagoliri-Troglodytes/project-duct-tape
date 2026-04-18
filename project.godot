@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Project Duct Tape"
-run/main_scene="uid://d0ikgvpi2pru3"
+run/main_scene="uid://btqrs6ypr4qym"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
