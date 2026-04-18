@@ -21,8 +21,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x += 1
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
-	if Input.is_action_pressed("jump") and is_on_floor():
-		velocity.y += jump_velocity
+	if Input.is_action_pressed("jump"):
+		jump()
 		
 	if abs(velocity.x) > 0:
 		velocity.x *= speed
@@ -31,3 +31,10 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.stop()
 		
 	move_and_slide()
+	
+func jump():
+	if is_on_floor():
+		velocity.y += jump_velocity
+	elif is_on_wall():
+		pass
+	
