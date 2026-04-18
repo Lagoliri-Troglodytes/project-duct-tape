@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bp7wmo5t0ad2r"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1831466630]
+
+[node name="StartButton" type="Button" parent="." unique_id=536314114]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -62.5
+offset_right = 125.0
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "Start"
+
+[node name="CreditsButton" type="Button" parent="." unique_id=167627655]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Credits"
