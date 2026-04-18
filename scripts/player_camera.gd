@@ -2,7 +2,7 @@ extends Camera2D
 class_name PlayerCamera
 @onready var player : Player = self.get_node("../Player")
 
-var camera_speed : float = 12.0
+var camera_speed : float = 6.0
 var camera_offset : Vector2 = Vector2(0.0,-0.125)
 func quick_teleport_to_player() -> void:
 	check_player_exists()
@@ -11,7 +11,7 @@ func quick_teleport_to_player() -> void:
 func _process(delta: float) -> void:
 	check_player_exists()
 	var screen_size : Vector2 = self.get_viewport_rect().size
-	var player_vel_influence : Vector2 = player.get_real_velocity()*0.5
+	var player_vel_influence : Vector2 = player.get_real_velocity()*0.22
 	player_vel_influence.x = clamp(
 		player_vel_influence.x,
 		-screen_size.x*0.5,
