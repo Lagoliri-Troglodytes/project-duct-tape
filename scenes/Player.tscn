@@ -1,8 +1,17 @@
 [gd_scene format=3 uid="uid://d0ikgvpi2pru3"]
 
+[ext_resource type="SpriteFrames" uid="uid://5wb2cgr0h6wa" path="res://resources/player/placeholder_sprite_frames.tres" id="1_p0vlq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
+size = Vector2(64, 64)
+
 [node name="Area2D" type="Area2D" unique_id=1220127185]
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1214223773]
+position = Vector2(0, -32)
+sprite_frames = ExtResource("1_p0vlq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=129894208]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_v6fml")

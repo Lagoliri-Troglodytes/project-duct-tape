@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://5wb2cgr0h6wa"]
+
+[ext_resource type="Texture2D" uid="uid://dphmuxwckq0ej" path="res://resources/player/jeremy_still.tres" id="1_chwga"]
+[ext_resource type="Texture2D" uid="uid://bnexgjhn2umxm" path="res://resources/player/jeremy_running.tres" id="2_ogoh0"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_chwga")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ogoh0")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
