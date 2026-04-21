@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dhnigfja160jd"]
+
+[ext_resource type="Texture2D" uid="uid://i1x7b6dll21m" path="res://images/rift.png" id="1_rqbcp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_171rb"]
+size = Vector2(34, 67)
+
+[node name="Rift" type="Sprite2D" unique_id=807192395]
+texture = ExtResource("1_rqbcp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1322398310]
+position = Vector2(1, 7)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1938470310]
+position = Vector2(-5, -6.5)
+shape = SubResource("RectangleShape2D_171rb")
