@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bkyys4fn3kbyv"]
+
+[ext_resource type="TileSet" uid="uid://cxqiwp3stj4q8" path="res://resources/entity_tileset.tres" id="1_54485"]
+
+[node name="EntityTileMap" type="TileMapLayer" unique_id=128718999]
+tile_map_data = PackedByteArray(0, 0, 245, 255, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0)
+tile_set = ExtResource("1_54485")
