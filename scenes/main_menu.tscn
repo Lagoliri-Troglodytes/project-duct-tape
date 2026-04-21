@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://bp7wmo5t0ad2r"]
 
-[ext_resource type="Script" uid="uid://gvvn2rnsvf0e" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://gvvn2rnsvf0e" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l6cm7"]
+load_path = "res://.godot/imported/duct_tape.png-faa9b16446730bdf2f24558cdf846e9a.ctex"
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1831466630]
 script = ExtResource("1_l6cm7")
+
+[node name="StartBackground" type="ColorRect" parent="." unique_id=298974540]
+offset_right = 1600.0
+offset_bottom = 900.0
+color = Color(0.08160236, 0.12738582, 0.26544857, 1)
 
 [node name="Title" type="Label" parent="." unique_id=64825305]
 custom_minimum_size = Vector2(10, 10)
@@ -25,10 +33,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -124.0
-offset_top = -50.0
-offset_right = 126.0
-offset_bottom = 100.0
+offset_left = -128.0
+offset_top = 206.0
+offset_right = 122.0
+offset_bottom = 356.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
@@ -50,3 +58,11 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 48
 text = "Credist"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=500605999]
+offset_left = 560.0
+offset_top = 160.0
+offset_right = 624.0
+offset_bottom = 224.0
+scale = Vector2(8, 8)
+texture = SubResource("CompressedTexture2D_l6cm7")

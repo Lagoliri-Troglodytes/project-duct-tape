@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cburxivjgw0q5" path="res://scripts/player.gd" id="1_v6fml"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
-size = Vector2(49, 40)
+size = Vector2(49, 59)
 
 [node name="Player" type="CharacterBody2D" unique_id=901943741]
 script = ExtResource("1_v6fml")
@@ -16,5 +16,5 @@ position = Vector2(0, -32)
 sprite_frames = ExtResource("1_p0vlq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=129894208]
-position = Vector2(-0.5, -20)
+position = Vector2(0, -30)
 shape = SubResource("RectangleShape2D_v6fml")
