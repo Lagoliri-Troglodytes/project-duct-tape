@@ -3,6 +3,10 @@ class_name Player
 
 @export var speed = 400
 @export var jump_velocity = -400
+var has_jumped = true
+
+@onready var coyote_timer = $CoyoteTimer
+
 var screen_size
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") 
@@ -16,7 +20,10 @@ func _physics_process(delta: float) -> void:
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
-			
+		coyote_timer.start()
+		has_jumped = true
+
+
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
 	if Input.is_action_pressed("move_left"):
@@ -32,9 +39,9 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 	
+	
 func jump():
-	if is_on_floor():
+	if is_on_floor() or !coyote_timer.is_stopped() and !has_jumped:
 		velocity.y += jump_velocity
-	elif is_on_wall():
-		pass
+		has_jumped = false
 	
