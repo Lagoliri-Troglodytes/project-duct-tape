@@ -8,10 +8,33 @@ load_path = "res://.godot/imported/duct_tape.png-faa9b16446730bdf2f24558cdf846e9
 [node name="MainMenu" type="CanvasLayer" unique_id=1831466630]
 script = ExtResource("1_l6cm7")
 
-[node name="StartBackground" type="ColorRect" parent="." unique_id=298974540]
+[node name="MainMenuBackground" type="ColorRect" parent="." unique_id=298974540]
 offset_right = 1600.0
 offset_bottom = 900.0
-color = Color(0.9764706, 0.77254903, 0.3529412, 1)
+color = Color(0.98808426, 0.8177255, 0.48598933, 1)
+
+[node name="DuctTapeSprite" type="TextureRect" parent="." unique_id=500605999]
+offset_left = 560.0
+offset_top = 160.0
+offset_right = 624.0
+offset_bottom = 224.0
+scale = Vector2(8, 8)
+texture = SubResource("CompressedTexture2D_l6cm7")
+
+[node name="CreditsBackground" type="ColorRect" parent="." unique_id=1912079135]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -370.0
+offset_right = 480.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.40869617, 0.18868807, 0.010383825, 1)
 
 [node name="Title" type="Label" parent="." unique_id=64825305]
 custom_minimum_size = Vector2(10, 10)
@@ -25,6 +48,8 @@ offset_bottom = 225.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 90
 text = "Project Duct Tape"
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="StartButton" type="Button" parent="." unique_id=536314114]
@@ -33,9 +58,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -128.0
+offset_left = -125.0
 offset_top = 206.0
-offset_right = 122.0
+offset_right = 125.0
 offset_bottom = 356.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -46,62 +71,126 @@ text = "Start"
 autowrap_mode = 2
 
 [node name="CreditsButton" type="Button" parent="." unique_id=167627655]
-anchors_preset = 3
-anchor_left = 1.0
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -172.0
+offset_left = -87.5
 offset_top = -75.0
-offset_right = 3.0
-grow_horizontal = 0
+offset_right = 87.5
+grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 48
-text = "Credist"
+text = "Credits"
 
-[node name="DuctTapeSprite" type="TextureRect" parent="." unique_id=500605999]
-offset_left = 560.0
-offset_top = 160.0
-offset_right = 624.0
-offset_bottom = 224.0
-scale = Vector2(8, 8)
-texture = SubResource("CompressedTexture2D_l6cm7")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1912079135]
+[node name="CreditsCloseButton" type="Button" parent="." unique_id=1537925486]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -480.0
-offset_top = -270.0
-offset_right = 480.0
-offset_bottom = 270.0
+offset_left = -75.0
+offset_top = 75.0
+offset_right = 75.0
+offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.6313726, 0.30588236, 0.02745098, 1)
-
-[node name="CreditsCloseButton" type="Button" parent="." unique_id=1537925486]
-offset_left = 736.0
-offset_top = 640.0
-offset_right = 856.0
-offset_bottom = 700.0
 theme_override_font_sizes/font_size = 32
 text = "Close"
 autowrap_mode = 2
 icon_alignment = 1
 
 [node name="CreditsList" type="Label" parent="." unique_id=288618673]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -480.0
-offset_top = -270.0
+offset_top = -230.0
 offset_right = 480.0
-offset_bottom = 270.0
+offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 16
-text = "Hello"
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credits1" type="Label" parent="CreditsList" unique_id=36355412]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -200.0
+offset_right = 480.0
+offset_bottom = -125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Member 1 - Various Tasks"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credits2" type="Label" parent="CreditsList" unique_id=477659407]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -125.0
+offset_right = 480.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Member 2 - Other Tasks"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credits3" type="Label" parent="CreditsList" unique_id=1711086980]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -50.0
+offset_right = 480.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Member 3 - Important Tasks"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credits4" type="Label" parent="CreditsList" unique_id=57214191]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = 25.0
+offset_right = 480.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Member 4 - The Remaining Tasks"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CreditsCloseButton" to="." method="_on_credits_close_button_pressed"]
