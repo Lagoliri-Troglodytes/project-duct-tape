@@ -1,0 +1,65 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://becc7xib4ubuh"]
+
+[ext_resource type="Texture2D" uid="uid://b2okgndiobsjn" path="res://images/jeremy/jeremy_idleright_01.png" id="1_yoliy"]
+[ext_resource type="Texture2D" uid="uid://81fm8qmnlc8g" path="res://images/jeremy/jeremy_idleright_02.png" id="2_xxyc8"]
+[ext_resource type="Texture2D" uid="uid://b125sy368g51" path="res://images/jeremy/jeremy_idleright_03.png" id="3_26mds"]
+[ext_resource type="Texture2D" uid="uid://dwjfv2amqt7g3" path="res://images/jeremy/jeremy_idleright_04.png" id="4_gjv6w"]
+[ext_resource type="Texture2D" uid="uid://l0knrr3ys81b" path="res://images/jeremy/jeremy_idleright_05.png" id="5_hoxjw"]
+[ext_resource type="Texture2D" uid="uid://dotcw3wx0pbmr" path="res://images/jeremy/jeremy_jumpright_01.png" id="6_a7qhr"]
+[ext_resource type="Texture2D" uid="uid://bq6htjr8gspcp" path="res://images/jeremy/jeremy_jumpright_02.png" id="7_qx7b6"]
+[ext_resource type="Texture2D" uid="uid://dkhqvxykgut3x" path="res://images/jeremy/jeremy_stillright.png" id="8_knq25"]
+[ext_resource type="Texture2D" uid="uid://co5cfr3n4e3u1" path="res://images/jeremy/jeremy_walkright_01.png" id="9_7bxf0"]
+[ext_resource type="Texture2D" uid="uid://8ai7pvhrt6ah" path="res://images/jeremy/jeremy_walkright_02.png" id="10_nnrco"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yoliy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xxyc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_26mds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gjv6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hoxjw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_a7qhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qx7b6")
+}],
+"loop": false,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_knq25")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_7bxf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nnrco")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 15.0
+}]

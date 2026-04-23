@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://d0ikgvpi2pru3"]
 
-[ext_resource type="SpriteFrames" uid="uid://5wb2cgr0h6wa" path="res://resources/player/placeholder_sprite_frames.tres" id="1_p0vlq"]
 [ext_resource type="Script" uid="uid://cburxivjgw0q5" path="res://scripts/player.gd" id="1_v6fml"]
+[ext_resource type="SpriteFrames" uid="uid://becc7xib4ubuh" path="res://resources/player/jeremy_sprite_frames.tres" id="2_mdl7e"]
 [ext_resource type="Texture2D" uid="uid://cyaunypsgqqcn" path="res://images/attack.png" id="3_3li8b"]
 [ext_resource type="Script" uid="uid://drgris3kthfv" path="res://scripts/tape.gd" id="3_mdl7e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
-size = Vector2(49, 59)
+size = Vector2(29, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mdl7e"]
 size = Vector2(128, 37)
@@ -19,10 +19,13 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1214223773]
 position = Vector2(0, -32)
-sprite_frames = ExtResource("1_p0vlq")
+sprite_frames = ExtResource("2_mdl7e")
+animation = &"falling"
+frame = 1
+frame_progress = 1.0
 
 [node name="player_hitbox" type="CollisionShape2D" parent="." unique_id=129894208]
-position = Vector2(0, -30)
+position = Vector2(-2.5, -30)
 shape = SubResource("RectangleShape2D_v6fml")
 
 [node name="Tape" type="Area2D" parent="." unique_id=1317229283]

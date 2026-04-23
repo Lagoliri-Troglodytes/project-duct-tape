@@ -6,6 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_k12gj"]
 radius = 19.94
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_67neu"]
+radius = 29.88
+
 [node name="Enemy" type="RigidBody2D" unique_id=1456245977]
 collision_layer = 2
 collision_mask = 3
@@ -29,3 +32,12 @@ position = Vector2(25, 0)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="RotationIgnore" unique_id=867070303]
 rect = Rect2(-300, -150, 600, 300)
+
+[node name="Hitbox" type="Area2D" parent="RotationIgnore" unique_id=1349460873]
+position = Vector2(-1, 1)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RotationIgnore/Hitbox" unique_id=384708154]
+shape = SubResource("CircleShape2D_67neu")
+debug_color = Color(0.9999998, 0.008888498, 0.067694694, 0.41960785)

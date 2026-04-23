@@ -4,6 +4,8 @@ var googoo_timer : float = 0.0
 var googoo_o_clock : float = randf_range(3.0,8.0)
 @onready var original_position : Vector2 = self.position
 var is_closed : bool = false
+func _ready() -> void:
+	self.flip_h = randi()%2 == 0
 func close_rift() -> void:
 	self.texture = load("res://images/rift_closed.png")
 	is_closed = true
@@ -22,6 +24,7 @@ func _process(delta: float) -> void:
 			close_rift()
 	googoo_timer += delta
 	if googoo_timer > googoo_o_clock:
+		self.flip_h = !self.flip_h
 		var new_enemy : Enemy = enemy_scene.instantiate()
 		new_enemy.delete_if_offscreen = true
 		new_enemy.position = self.position
