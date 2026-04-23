@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,6 +20,7 @@ func _on_start_button_pressed() -> void:
 	$CreditsButton.hide()
 	$CreditsCloseButton.hide()
 	$CreditsList.hide()
+	get_tree().change_scene_to_packed(load("res://scenes/game.tscn"))
 
 
 func _on_credits_button_pressed() -> void:

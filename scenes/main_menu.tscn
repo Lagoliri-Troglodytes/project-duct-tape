@@ -5,15 +5,21 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l6cm7"]
 load_path = "res://.godot/imported/duct_tape.png-faa9b16446730bdf2f24558cdf846e9a.ctex"
 
-[node name="MainMenu" type="CanvasLayer" unique_id=1831466630]
+[node name="MainMenu" type="Control" unique_id=1134800801]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 898.0
 script = ExtResource("1_l6cm7")
 
 [node name="MainMenuBackground" type="ColorRect" parent="." unique_id=298974540]
+layout_mode = 0
 offset_right = 1600.0
 offset_bottom = 900.0
 color = Color(0.98808426, 0.8177255, 0.48598933, 1)
 
 [node name="DuctTapeSprite" type="TextureRect" parent="." unique_id=500605999]
+layout_mode = 0
 offset_left = 560.0
 offset_top = 160.0
 offset_right = 624.0
@@ -23,6 +29,7 @@ texture = SubResource("CompressedTexture2D_l6cm7")
 
 [node name="CreditsBackground" type="ColorRect" parent="." unique_id=1912079135]
 visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -38,6 +45,7 @@ color = Color(0.40869617, 0.18868807, 0.010383825, 1)
 
 [node name="Title" type="Label" parent="." unique_id=64825305]
 custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -53,6 +61,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="StartButton" type="Button" parent="." unique_id=536314114]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -71,6 +80,7 @@ text = "Start"
 autowrap_mode = 2
 
 [node name="CreditsButton" type="Button" parent="." unique_id=167627655]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -86,6 +96,7 @@ text = "Credits"
 
 [node name="CreditsCloseButton" type="Button" parent="." unique_id=1537925486]
 visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -104,6 +115,7 @@ icon_alignment = 1
 
 [node name="CreditsList" type="Label" parent="." unique_id=288618673]
 visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
