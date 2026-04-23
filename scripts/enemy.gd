@@ -4,13 +4,15 @@ var is_facing_right : bool = true
 var delete_if_offscreen : bool = false
 var change_direction_timer : float = 0.0
 var change_direction_time : float = randf_range(2.0,8.0)
-@export var jump_velocity = -400
+var is_dead : bool = false
+@export var jump_velocity = -600
 func _ready() -> void:
 	self.contact_monitor = true 
 	max_contacts_reported = 8
 	is_facing_right = self.linear_velocity.x > 0.0
 	$RotationIgnore/Sprite2D.play("walking")
 func _physics_process(delta: float) -> void:
+	self.freeze = !delete_if_offscreen and !$RotationIgnore/VisibleOnScreenNotifier2D.is_on_screen()
 	constant_force = Vector2(250,0.0)
 	change_direction_timer += delta
 	if change_direction_timer > change_direction_time:
@@ -37,7 +39,6 @@ func _physics_process(delta: float) -> void:
 		for collider in self.get_colliding_bodies():
 			if collider is Player:
 				if collider.velocity.y >= 0:
-					print("lalala")
 					collider.position += Vector2.UP * 8.0
 					collider.velocity.y += collider.jump_velocity
 					collider.has_jumped = true

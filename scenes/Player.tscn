@@ -26,17 +26,16 @@ position = Vector2(0, -30)
 shape = SubResource("RectangleShape2D_v6fml")
 
 [node name="Tape" type="Area2D" parent="." unique_id=1317229283]
-position = Vector2(-1, -4)
+position = Vector2(88, -25)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("3_mdl7e")
 
 [node name="Sprite2D" type="Sprite2D" parent="Tape" unique_id=1990897838]
-visible = false
-position = Vector2(88.5, -25.5)
 scale = Vector2(0.7743903, 1.15625)
 texture = ExtResource("3_3li8b")
 
 [node name="attack_hitbox" type="CollisionShape2D" parent="Tape" unique_id=355877683]
-position = Vector2(88, -25.5)
 shape = SubResource("RectangleShape2D_mdl7e")
 
 [node name="CoyoteTimer" type="Timer" parent="." unique_id=581324027]
