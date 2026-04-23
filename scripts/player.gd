@@ -30,6 +30,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x -= 1
 	if Input.is_action_pressed("jump"):
 		jump()
+	if Input.is_action_pressed("attack"):
+		pass
 		
 	if abs(velocity.x) > 0:
 		velocity.x *= speed
@@ -43,7 +45,6 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 	elif velocity.x == 0:
 		$AnimatedSprite2D.animation = "default"
-		
 	move_and_slide()
 	
 	
