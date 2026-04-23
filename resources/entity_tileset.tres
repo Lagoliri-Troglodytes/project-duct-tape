@@ -2,10 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://2m4y36le07e6" path="res://scenes/entities/start.tscn" id="1_ritor"]
 [ext_resource type="PackedScene" uid="uid://dhnigfja160jd" path="res://scenes/entities/rift.tscn" id="2_prcol"]
+[ext_resource type="PackedScene" uid="uid://bqagdv4awg6cw" path="res://scenes/entities/enemy.tscn" id="3_q7te1"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_prcol"]
 scenes/1/scene = ExtResource("1_ritor")
 scenes/2/scene = ExtResource("2_prcol")
+scenes/3/scene = ExtResource("3_q7te1")
 
 [resource]
 tile_size = Vector2i(64, 64)
