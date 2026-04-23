@@ -144,10 +144,10 @@ offset_right = 480.0
 offset_bottom = -125.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 48
-text = "Member 1 - Various Tasks"
+theme_override_font_sizes/font_size = 35
+text = "Wren Kowalcic - Systems Programmer, Project Manager"
 horizontal_alignment = 1
-autowrap_mode = 2
+vertical_alignment = 1
 
 [node name="Credits2" type="Label" parent="CreditsList" unique_id=477659407]
 layout_mode = 1
@@ -162,10 +162,10 @@ offset_right = 480.0
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 48
-text = "Member 2 - Other Tasks"
+theme_override_font_sizes/font_size = 35
+text = "Josiah Sipe - Gameplay Mechanics Programmer"
 horizontal_alignment = 1
-autowrap_mode = 2
+vertical_alignment = 1
 
 [node name="Credits3" type="Label" parent="CreditsList" unique_id=1711086980]
 layout_mode = 1
@@ -180,9 +180,10 @@ offset_right = 480.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 48
-text = "Member 3 - Important Tasks"
+theme_override_font_sizes/font_size = 35
+text = "Chad McKenzie - Visual Lead, Art Director"
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Credits4" type="Label" parent="CreditsList" unique_id=57214191]
@@ -198,10 +199,10 @@ offset_right = 480.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 48
-text = "Member 4 - The Remaining Tasks"
+theme_override_font_sizes/font_size = 35
+text = "Ben Kearton - Technical UI Artist, Level Designer"
 horizontal_alignment = 1
-autowrap_mode = 2
+vertical_alignment = 1
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
