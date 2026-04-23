@@ -7,6 +7,8 @@
 radius = 37.0
 
 [node name="Start" type="Sprite2D" unique_id=807192395]
+light_mask = 2
+visibility_layer = 2
 texture = ExtResource("1_jaeev")
 script = ExtResource("2_lchbc")
 
