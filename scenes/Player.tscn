@@ -12,7 +12,7 @@ size = Vector2(49, 59)
 size = Vector2(128, 37)
 
 [node name="Player" type="CharacterBody2D" unique_id=901943741]
-position = Vector2(-11, 0)
+collision_layer = 2
 script = ExtResource("1_v6fml")
 jump_velocity = -800
 metadata/_edit_group_ = true
@@ -30,6 +30,7 @@ position = Vector2(-1, -4)
 script = ExtResource("3_mdl7e")
 
 [node name="Sprite2D" type="Sprite2D" parent="Tape" unique_id=1990897838]
+visible = false
 position = Vector2(88.5, -25.5)
 scale = Vector2(0.7743903, 1.15625)
 texture = ExtResource("3_3li8b")
