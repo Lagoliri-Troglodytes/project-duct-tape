@@ -5,7 +5,9 @@ class_name Player
 @export var jump_velocity = -400
 var has_jumped = true
 @export var max_health : int = 3
+@export var time_left : float = 60*2
 var health : int = max_health
+var is_dead : bool = false
 
 @onready var coyote_timer = $CoyoteTimer
 
@@ -16,6 +18,26 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func ready():
 	screen_size = get_viewport_rect().size
 
+func die() -> void:
+	if is_dead: return;
+	is_dead = true
+	$player_hitbox.disabled = true
+	self.z_index += 2
+	await get_tree().create_timer(1.5).timeout
+	LevelLoader.load_level()
+func hurt() -> void:
+	self.velocity += float(jump_velocity)*Vector2.DOWN
+	modulate = Color.RED
+	health -= 1
+	if health <= 0:
+		die()
+
+func _process(delta: float) -> void:
+	time_left-=delta
+	modulate = lerp(modulate,Color.WHITE,delta*3.0)
+	if time_left < 0: time_left = 0.0;
+	if time_left == 0.0:
+		die()
 
 func _physics_process(delta: float) -> void:
 	velocity.x = 0

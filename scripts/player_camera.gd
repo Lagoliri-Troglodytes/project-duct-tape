@@ -10,6 +10,8 @@ func quick_teleport_to_player() -> void:
 	self.global_position = player.global_position+camera_offset*screen_size
 func _process(delta: float) -> void:
 	check_player_exists()
+	
+	if player.is_dead: return;
 	var screen_size : Vector2 = self.get_viewport_rect().size
 	var player_vel_influence : Vector2 = player.get_real_velocity()*0.22
 	player_vel_influence.x = clamp(

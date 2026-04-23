@@ -1,14 +1,13 @@
 [gd_scene format=4 uid="uid://btqrs6ypr4qym"]
 
-[ext_resource type="Script" uid="uid://bkr1bkollxx6i" path="res://scripts/player_camera.gd" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://0f2ae14niy5d" path="res://scenes/player_camera.tscn" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://d0ikgvpi2pru3" path="res://scenes/Player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bkyys4fn3kbyv" path="res://scenes/entity_tile_map.tscn" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bidewyillvds7" path="res://scenes/terrain_tile_map.tscn" id="3_lnu2h"]
 
 [node name="game" type="Node2D" unique_id=2122025013]
 
-[node name="PlayerCamera" type="Camera2D" parent="." unique_id=1146353521]
-script = ExtResource("1_yqjtg")
+[node name="PlayerCamera" parent="." unique_id=846951107 instance=ExtResource("1_lbhrr")]
 
 [node name="Player" parent="." unique_id=901943741 instance=ExtResource("2_lnu2h")]
 

@@ -54,8 +54,8 @@ func _physics_process(delta: float) -> void:
 					die()
 				elif collider.velocity.y >= 0:
 					collider.position += Vector2.UP * 8.0
-					collider.velocity.y += collider.jump_velocity
 					collider.has_jumped = true
+					collider.hurt()
 			if collider is Enemy:
 				if collider.position > self.position+4.0*Vector2.DOWN and self.linear_velocity.y >= 0.0:
 					self.linear_velocity += float(jump_velocity)*Vector2.DOWN.rotated(randf_range(-PI/3.0,PI/3.0))
