@@ -19,17 +19,20 @@ func _on_start_button_pressed() -> void:
 	$StartButton.hide()
 	$CreditsButton.hide()
 	$CreditsCloseButton.hide()
+	$CreditsTitle.hide()
 	$CreditsList.hide()
 	LevelLoader.load_level("game")
+
 func _on_credits_button_pressed() -> void:
-	$Title.text = "Credits"
+	$Title.hide()
 	$CreditsBackground.show()
 	$CreditsCloseButton.show()
+	$CreditsTitle.show()
 	$CreditsList.show()
 
-
 func _on_credits_close_button_pressed() -> void:
-	$Title.text = "Project Duct Tape"
+	$Title.show()
 	$CreditsBackground.hide()
 	$CreditsCloseButton.hide()
+	$CreditsTitle.hide()
 	$CreditsList.hide()

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bp7wmo5t0ad2r"]
 
 [ext_resource type="Script" uid="uid://gvvn2rnsvf0e" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://bwsh2ve1vf81h" path="res://resources/comic_sans.TTF" id="2_ekxnf"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l6cm7"]
 load_path = "res://.godot/imported/duct_tape.png-faa9b16446730bdf2f24558cdf846e9a.ctex"
@@ -54,6 +55,14 @@ offset_top = 75.0
 offset_right = 400.0
 offset_bottom = 225.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0.83632696, 0.83632696, 0.83632696, 1)
+theme_override_colors/font_shadow_color = Color(0.1749846, 0.17498463, 0.17498457, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 90
 text = "Project Duct Tape"
 horizontal_alignment = 1
@@ -73,7 +82,7 @@ offset_right = 125.0
 offset_bottom = 356.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 80
 action_mode = 0
 text = "Start"
@@ -91,6 +100,7 @@ offset_top = -75.0
 offset_right = 87.5
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 48
 text = "Credits"
 
@@ -112,6 +122,32 @@ theme_override_font_sizes/font_size = 32
 text = "Close"
 autowrap_mode = 2
 icon_alignment = 1
+
+[node name="CreditsTitle" type="Label" parent="." unique_id=956973859]
+visible = false
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 72.0
+offset_right = 400.0
+offset_bottom = 222.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.83632696, 0.83632696, 0.83632696, 1)
+theme_override_colors/font_shadow_color = Color(0.1764706, 0.1764706, 0.1764706, 0)
+theme_override_colors/font_outline_color = Color(0.933207, 0.933207, 0.9332069, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_ekxnf")
+theme_override_font_sizes/font_size = 90
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="CreditsList" type="Label" parent="." unique_id=288618673]
 visible = false
@@ -144,6 +180,10 @@ offset_right = 480.0
 offset_bottom = -125.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.84705883, 0.84705883, 0.84705883, 1)
+theme_override_colors/font_outline_color = Color(0.8352941, 0.8352941, 0.8352941, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 35
 text = "Wren Kowalcic - Systems Programmer, Project Manager"
 horizontal_alignment = 1
@@ -162,6 +202,10 @@ offset_right = 480.0
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.84705883, 0.84705883, 0.84705883, 1)
+theme_override_colors/font_outline_color = Color(0.8352941, 0.8352941, 0.8352941, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 35
 text = "Josiah Sipe - Gameplay Mechanics Programmer"
 horizontal_alignment = 1
@@ -180,6 +224,10 @@ offset_right = 480.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.84705883, 0.84705883, 0.84705883, 1)
+theme_override_colors/font_outline_color = Color(0.8352941, 0.8352941, 0.8352941, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 35
 text = "Chad McKenzie - Visual Lead, Art Director"
 horizontal_alignment = 1
@@ -199,6 +247,10 @@ offset_right = 480.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.84705883, 0.84705883, 0.84705883, 1)
+theme_override_colors/font_outline_color = Color(0.8352941, 0.8352941, 0.8352941, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 35
 text = "Ben Kearton - Technical UI Artist, Level Designer"
 horizontal_alignment = 1
