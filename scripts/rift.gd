@@ -11,12 +11,6 @@ func close_rift() -> void:
 	self.texture = load("res://images/rift_closed.png")
 	is_closed = true
 	# closing animation
-	await get_tree().create_timer(randf()*2.0).timeout
-	while self.scale.x > 0.05:
-		await get_tree().process_frame
-		self.scale.x = lerp(self.scale.x, 0.0, get_process_delta_time()*0.3)
-		self.scale.y = lerp(self.scale.y, 1.25, get_process_delta_time()*0.3)
-	self.queue_free()
 func _process(delta: float) -> void:
 	if is_closed: 
 		self.scale.x = lerp(self.scale.x, 0.0, get_process_delta_time()*0.3)
