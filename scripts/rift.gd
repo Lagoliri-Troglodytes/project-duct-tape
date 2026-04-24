@@ -18,7 +18,12 @@ func close_rift() -> void:
 		self.scale.y = lerp(self.scale.y, 1.25, get_process_delta_time()*0.3)
 	self.queue_free()
 func _process(delta: float) -> void:
-	if is_closed: return;
+	if is_closed: 
+		self.scale.x = lerp(self.scale.x, 0.0, get_process_delta_time()*0.3)
+		self.scale.y = lerp(self.scale.y, 1.25, get_process_delta_time()*0.3)
+		if !(self.scale.x > 0.05):
+			self.queue_free();
+		return
 	var bodies : Array = $Area2D.get_overlapping_areas()
 	for collider in bodies:
 		if collider is Tape:
