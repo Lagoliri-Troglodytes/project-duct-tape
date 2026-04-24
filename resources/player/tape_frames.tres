@@ -1,0 +1,35 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dbxtt540a47ug"]
+
+[ext_resource type="Texture2D" uid="uid://q8yva5krdwdh" path="res://images/attack/attackright_01.png" id="1_sdlf5"]
+[ext_resource type="Texture2D" uid="uid://ctsj24fyku1bn" path="res://images/attack/attackright_02.png" id="2_a7u1j"]
+[ext_resource type="Texture2D" uid="uid://c0xj88bajbivg" path="res://images/attack/attackright_03.png" id="3_76h40"]
+[ext_resource type="Texture2D" uid="uid://cehaa3f8w3qos" path="res://images/attack/attackright_04.png" id="4_ouv6g"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("1_sdlf5")
+}, {
+"duration": 0.75,
+"texture": ExtResource("2_a7u1j")
+}, {
+"duration": 0.8,
+"texture": ExtResource("3_76h40")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_ouv6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_76h40")
+}, {
+"duration": 0.8,
+"texture": ExtResource("2_a7u1j")
+}, {
+"duration": 0.7,
+"texture": ExtResource("1_sdlf5")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]

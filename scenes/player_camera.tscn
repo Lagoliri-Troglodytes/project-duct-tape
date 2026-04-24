@@ -1,8 +1,10 @@
-[gd_scene format=3 uid="uid://0f2ae14niy5d"]
+[gd_scene format=3 uid="uid://dxhh4fvkcdlrn"]
 
 [ext_resource type="Script" uid="uid://bkr1bkollxx6i" path="res://scripts/player_camera.gd" id="1_tparg"]
 [ext_resource type="Texture2D" uid="uid://ctkolsvirocpj" path="res://images/man_of_true_loyalty.png" id="2_vtnai"]
 [ext_resource type="Texture2D" uid="uid://bo8pe2hio41ol" path="res://images/the_hand_of_time.png" id="3_e80xl"]
+[ext_resource type="FontFile" uid="uid://bwsh2ve1vf81h" path="res://resources/comic_sans.TTF" id="4_vtnai"]
+[ext_resource type="Texture2D" uid="uid://byyow48m3awi1" path="res://images/heart_healthy.png" id="5_e80xl"]
 
 [node name="PlayerCamera" type="Camera2D" unique_id=846951107]
 script = ExtResource("1_tparg")
@@ -16,3 +18,30 @@ texture = ExtResource("2_vtnai")
 position = Vector2(3, -12)
 texture = ExtResource("3_e80xl")
 offset = Vector2(0, -20)
+
+[node name="DigitalElement" type="Label" parent="Clock" unique_id=1683587783]
+offset_left = -46.5
+offset_top = 30.5
+offset_right = 52.0
+offset_bottom = 53.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.5568628, 0.6901961, 0.827451, 1)
+theme_override_fonts/font = ExtResource("4_vtnai")
+text = "8:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hearts" type="Node2D" parent="Clock" unique_id=2059957430]
+position = Vector2(-11.5, -3.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clock/Hearts" unique_id=653124367]
+position = Vector2(-191.5, -29)
+texture = ExtResource("5_e80xl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Clock/Hearts" unique_id=205571270]
+position = Vector2(-131, -29)
+texture = ExtResource("5_e80xl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Clock/Hearts" unique_id=384087135]
+position = Vector2(-70.5, -29)
+texture = ExtResource("5_e80xl")

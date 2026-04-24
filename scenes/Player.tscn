@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cburxivjgw0q5" path="res://scripts/player.gd" id="1_v6fml"]
 [ext_resource type="SpriteFrames" uid="uid://becc7xib4ubuh" path="res://resources/player/jeremy_sprite_frames.tres" id="2_mdl7e"]
-[ext_resource type="Texture2D" uid="uid://cyaunypsgqqcn" path="res://images/attack.png" id="3_3li8b"]
 [ext_resource type="Script" uid="uid://drgris3kthfv" path="res://scripts/tape.gd" id="3_mdl7e"]
+[ext_resource type="SpriteFrames" uid="uid://dbxtt540a47ug" path="res://resources/player/tape_frames.tres" id="4_mdl7e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
 size = Vector2(29, 59)
@@ -29,14 +29,16 @@ position = Vector2(-2.5, -30)
 shape = SubResource("RectangleShape2D_v6fml")
 
 [node name="Tape" type="Area2D" parent="." unique_id=1317229283]
-position = Vector2(88, -25)
+show_behind_parent = true
+position = Vector2(76, -28)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("3_mdl7e")
 
-[node name="Sprite2D" type="Sprite2D" parent="Tape" unique_id=1990897838]
-scale = Vector2(0.7743903, 1.15625)
-texture = ExtResource("3_3li8b")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Tape" unique_id=1548027719]
+sprite_frames = ExtResource("4_mdl7e")
+frame = 6
+frame_progress = 1.0
 
 [node name="attack_hitbox" type="CollisionShape2D" parent="Tape" unique_id=355877683]
 shape = SubResource("RectangleShape2D_mdl7e")

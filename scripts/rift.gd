@@ -1,4 +1,5 @@
 extends Sprite2D
+class_name Rift
 var enemy_scene : PackedScene = preload("res://scenes/entities/enemy.tscn")
 var googoo_timer : float = 0.0
 var googoo_o_clock : float = randf_range(3.0,8.0)

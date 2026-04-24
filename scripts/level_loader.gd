@@ -6,4 +6,5 @@ func load_level(l : String = level):
 	var file_path : String = "res://scenes/"+level+".tscn"
 	if !FileAccess.file_exists(file_path): return;
 	get_tree().change_scene_to_packed(load(file_path))
-	
+func return_to_menu():
+	get_tree().change_scene_to_packed(load("res://scenes/main_menu.tscn"))

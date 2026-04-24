@@ -5,34 +5,48 @@ class_name Player
 @export var jump_velocity = -400
 var has_jumped = true
 @export var max_health : int = 3
-@export var time_left : float = 60*2
+@export var level_time : float = 60+30
+@onready var time_left : float = level_time
 var health : int = max_health
 var is_dead : bool = false
+var is_hurt : bool = false
+var won_level : bool = false
 
 @onready var coyote_timer = $CoyoteTimer
 
 var screen_size
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") 
-
 func ready():
 	screen_size = get_viewport_rect().size
-
+func win() -> void:
+	self.visible = false
+	won_level = true
+	self.velocity = Vector2.ZERO
+	move_and_slide()
+	$player_hitbox.disabled = true
 func die() -> void:
 	if is_dead: return;
+	
+	health = 0
 	is_dead = true
 	$player_hitbox.disabled = true
 	self.z_index += 2
 	await get_tree().create_timer(1.5).timeout
 	LevelLoader.load_level()
 func hurt() -> void:
+	if is_hurt: return;
+	is_hurt = true
 	self.velocity += float(jump_velocity)*Vector2.DOWN
 	modulate = Color.RED
 	health -= 1
 	if health <= 0:
 		die()
+	await get_tree().create_timer(0.4).timeout 
+	is_hurt = false
 
 func _process(delta: float) -> void:
+	if won_level: return;
 	time_left-=delta
 	modulate = lerp(modulate,Color.WHITE,delta*3.0)
 	if time_left < 0: time_left = 0.0;
@@ -40,6 +54,7 @@ func _process(delta: float) -> void:
 		die()
 
 func _physics_process(delta: float) -> void:
+	if won_level: return;
 	velocity.x = 0
 	
 	if not is_on_floor():
@@ -47,15 +62,15 @@ func _physics_process(delta: float) -> void:
 		coyote_timer.start()
 		has_jumped = true
 
-
-	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
-	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
-	if Input.is_action_pressed("jump"):
-		jump()
-	if Input.is_action_pressed("attack"):
-		pass
+	if !is_dead:
+		if Input.is_action_pressed("move_right"):
+			velocity.x += 1
+		if Input.is_action_pressed("move_left"):
+			velocity.x -= 1
+		if Input.is_action_pressed("jump"):
+			jump()
+		if Input.is_action_pressed("attack"):
+			pass
 		
 	if abs(velocity.x) > 0:
 		velocity.x *= speed
