@@ -36,4 +36,5 @@ func drive_away():
 	while $VisibleOnScreenNotifier2D.is_on_screen():
 		self.position+=Vector2.LEFT*self.get_process_delta_time()*300
 		await get_tree().process_frame
-	LevelLoader.return_to_menu()
+	LevelLoader.load_level("level_2")
+	#LevelLoader.return_to_menu()
