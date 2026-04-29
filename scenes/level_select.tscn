@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://bp5wdksml0uxc"]
+
+[ext_resource type="Script" uid="uid://tlk82ut5pktx" path="res://level_select.gd" id="1_p0wlc"]
+[ext_resource type="FontFile" uid="uid://bwsh2ve1vf81h" path="res://resources/comic_sans.TTF" id="2_2epne"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p0wlc"]
+load_path = "res://.godot/imported/duct_tape.png-faa9b16446730bdf2f24558cdf846e9a.ctex"
+
+[node name="LevelSelect" type="Control" unique_id=2011654052]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p0wlc")
+
+[node name="LevelSelectBackground" type="ColorRect" parent="." unique_id=216224305]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+color = Color(0.9882353, 0.81960785, 0.4862745, 1)
+
+[node name="LevelSelectTitle" type="Label" parent="." unique_id=1763860763]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 25.0
+offset_right = 400.0
+offset_bottom = 175.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.83632696, 0.83632696, 0.83632696, 1)
+theme_override_colors/font_shadow_color = Color(0.1749846, 0.17498463, 0.17498457, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_2epne")
+theme_override_font_sizes/font_size = 96
+text = "Level Select"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="DuctTapeTL" type="TextureRect" parent="." unique_id=658308805]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 400.0
+offset_right = 114.0
+offset_bottom = 464.0
+rotation = 3.9269907
+scale = Vector2(8, 8)
+texture = SubResource("CompressedTexture2D_p0wlc")
+
+[node name="DuctTapeTR" type="TextureRect" parent="." unique_id=1567688429]
+layout_mode = 0
+offset_left = 1220.0
+offset_top = 25.0
+offset_right = 1284.0
+offset_bottom = 89.0
+rotation = 5.497787
+scale = Vector2(8, 8)
+texture = SubResource("CompressedTexture2D_p0wlc")
+
+[node name="DuctTapeBL" type="TextureRect" parent="." unique_id=54466026]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 850.0
+offset_right = 439.0
+offset_bottom = 914.0
+rotation = 2.3561945
+scale = Vector2(8, 8)
+texture = SubResource("CompressedTexture2D_p0wlc")
+
+[node name="DuctTapeBR" type="TextureRect" parent="." unique_id=329584630]
+layout_mode = 0
+offset_left = 1590.0
+offset_top = 500.0
+offset_right = 1654.0
+offset_bottom = 564.0
+rotation = 0.7853982
+scale = Vector2(8, 8)
+texture = SubResource("CompressedTexture2D_p0wlc")
+
+[node name="Level1Button" type="Button" parent="." unique_id=1263226461]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 250.0
+offset_right = 360.0
+offset_bottom = 370.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2epne")
+theme_override_font_sizes/font_size = 79
+text = "1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level2Button" type="Button" parent="." unique_id=133402682]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 250.0
+offset_right = 610.0
+offset_bottom = 370.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2epne")
+theme_override_font_sizes/font_size = 79
+text = "2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level3Button" type="Button" parent="." unique_id=1492035054]
+layout_mode = 0
+offset_left = 740.0
+offset_top = 250.0
+offset_right = 860.0
+offset_bottom = 370.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2epne")
+theme_override_font_sizes/font_size = 79
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level4Button" type="Button" parent="." unique_id=2086067413]
+layout_mode = 0
+offset_left = 990.0
+offset_top = 250.0
+offset_right = 1110.0
+offset_bottom = 370.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2epne")
+theme_override_font_sizes/font_size = 79
+text = "4"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level5Button" type="Button" parent="." unique_id=492909255]
+layout_mode = 0
+offset_left = 1240.0
+offset_top = 250.0
+offset_right = 1360.0
+offset_bottom = 370.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_2epne")
+theme_override_font_sizes/font_size = 79
+text = "5"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Level1Button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="Level2Button" to="." method="_on_level_2_button_pressed"]

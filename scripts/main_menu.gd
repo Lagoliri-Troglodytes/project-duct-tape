@@ -12,16 +12,12 @@ func _process(delta: float) -> void:
 
 
 func _on_start_button_pressed() -> void:
-	$MainMenuBackground.hide()
-	$DuctTapeSprite.hide()
 	$CreditsBackground.hide()
-	$Title.hide()
-	$StartButton.hide()
-	$CreditsButton.hide()
 	$CreditsCloseButton.hide()
 	$CreditsTitle.hide()
 	$CreditsList.hide()
-	LevelLoader.load_level("game")
+	get_tree().change_scene_to_packed(load("res://scenes/level_select.tscn"))
+	#LevelLoader.load_level("game")
 
 func _on_credits_button_pressed() -> void:
 	$Title.hide()
