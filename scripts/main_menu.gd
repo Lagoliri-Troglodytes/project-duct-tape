@@ -17,7 +17,6 @@ func _on_start_button_pressed() -> void:
 	$CreditsTitle.hide()
 	$CreditsList.hide()
 	get_tree().change_scene_to_packed(load("res://scenes/level_select.tscn"))
-	#LevelLoader.load_level("game")
 
 func _on_credits_button_pressed() -> void:
 	$Title.hide()
