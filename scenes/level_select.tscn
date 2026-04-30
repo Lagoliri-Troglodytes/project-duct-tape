@@ -151,6 +151,23 @@ theme_override_font_sizes/font_size = 79
 text = "5"
 metadata/_edit_use_anchors_ = true
 
+[node name="SuperSecretLevelButton" type="Button" parent="." unique_id=406721389]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_2epne")
+theme_override_font_sizes/font_size = 12
+text = "?"
+alignment = 2
+icon_alignment = 1
+
 [node name="ReturnButton" type="Button" parent="." unique_id=45702529]
 layout_mode = 1
 anchors_preset = 7
@@ -173,4 +190,5 @@ text = "Return"
 [connection signal="pressed" from="Level3Button" to="." method="_on_level_3_button_pressed"]
 [connection signal="pressed" from="Level4Button" to="." method="_on_level_4_button_pressed"]
 [connection signal="pressed" from="Level5Button" to="." method="_on_level_5_button_pressed"]
+[connection signal="pressed" from="SuperSecretLevelButton" to="." method="_on_super_secret_level_button_pressed"]
 [connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]

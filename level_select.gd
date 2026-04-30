@@ -25,3 +25,6 @@ func _on_level_4_button_pressed() -> void:
 
 func _on_level_5_button_pressed() -> void:
 	get_tree().change_scene_to_packed(load("res://scenes/level_5.tscn"))
+
+func _on_super_secret_level_button_pressed() -> void:
+	get_tree().change_scene_to_packed(load("res://scenes/super_secret_level.tscn"))

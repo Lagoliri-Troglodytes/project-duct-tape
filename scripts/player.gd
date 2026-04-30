@@ -33,7 +33,8 @@ func die() -> void:
 	$player_hitbox.disabled = true
 	self.z_index += 2
 	await get_tree().create_timer(1.5).timeout
-	LevelLoader.load_level()
+	get_tree().change_scene_to_packed(load("res://scenes/level_select.tscn"))
+	#LevelLoader.load_level()
 func hurt() -> void:
 	if is_hurt: return;
 	is_hurt = true
