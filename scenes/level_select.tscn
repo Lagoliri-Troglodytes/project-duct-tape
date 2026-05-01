@@ -92,12 +92,13 @@ offset_left = 240.0
 offset_top = 250.0
 offset_right = 360.0
 offset_bottom = 370.0
+focus_neighbor_right = NodePath("../Level2Button")
+focus_neighbor_bottom = NodePath("../ReturnButton")
 theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("2_2epne")
 theme_override_font_sizes/font_size = 79
 text = "1"
-metadata/_edit_use_anchors_ = true
 
 [node name="Level2Button" type="Button" parent="." unique_id=133402682]
 layout_mode = 0
@@ -105,12 +106,14 @@ offset_left = 490.0
 offset_top = 250.0
 offset_right = 610.0
 offset_bottom = 370.0
+focus_neighbor_left = NodePath("../Level1Button")
+focus_neighbor_right = NodePath("../Level3Button")
+focus_neighbor_bottom = NodePath("../ReturnButton")
 theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("2_2epne")
 theme_override_font_sizes/font_size = 79
 text = "2"
-metadata/_edit_use_anchors_ = true
 
 [node name="Level3Button" type="Button" parent="." unique_id=1492035054]
 layout_mode = 0
@@ -118,12 +121,14 @@ offset_left = 740.0
 offset_top = 250.0
 offset_right = 860.0
 offset_bottom = 370.0
+focus_neighbor_left = NodePath("../Level2Button")
+focus_neighbor_right = NodePath("../Level4Button")
+focus_neighbor_bottom = NodePath("../ReturnButton")
 theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("2_2epne")
 theme_override_font_sizes/font_size = 79
 text = "3"
-metadata/_edit_use_anchors_ = true
 
 [node name="Level4Button" type="Button" parent="." unique_id=2086067413]
 layout_mode = 0
@@ -131,12 +136,14 @@ offset_left = 990.0
 offset_top = 250.0
 offset_right = 1110.0
 offset_bottom = 370.0
+focus_neighbor_left = NodePath("../Level3Button")
+focus_neighbor_right = NodePath("../Level5Button")
+focus_neighbor_bottom = NodePath("../ReturnButton")
 theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("2_2epne")
 theme_override_font_sizes/font_size = 79
 text = "4"
-metadata/_edit_use_anchors_ = true
 
 [node name="Level5Button" type="Button" parent="." unique_id=492909255]
 layout_mode = 0
@@ -144,12 +151,13 @@ offset_left = 1240.0
 offset_top = 250.0
 offset_right = 1360.0
 offset_bottom = 370.0
+focus_neighbor_left = NodePath("../Level4Button")
+focus_neighbor_right = NodePath(".")
 theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("2_2epne")
 theme_override_font_sizes/font_size = 79
 text = "5"
-metadata/_edit_use_anchors_ = true
 
 [node name="SuperSecretLevelButton" type="Button" parent="." unique_id=406721389]
 layout_mode = 1
@@ -162,6 +170,9 @@ offset_left = -16.0
 offset_top = -26.0
 grow_horizontal = 0
 grow_vertical = 0
+focus_neighbor_left = NodePath("../ReturnButton")
+focus_neighbor_top = NodePath("../Level5Button")
+focus_neighbor_bottom = NodePath("../ReturnButton")
 theme_override_fonts/font = ExtResource("2_2epne")
 theme_override_font_sizes/font_size = 12
 text = "?"
@@ -181,6 +192,8 @@ offset_right = 125.0
 offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 0
+focus_neighbor_top = NodePath("../Level3Button")
+focus_neighbor_right = NodePath("../SuperSecretLevelButton")
 theme_override_fonts/font = ExtResource("2_2epne")
 theme_override_font_sizes/font_size = 64
 text = "Return"
